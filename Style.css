@@ -68,7 +68,8 @@ body {
 
 .Header img {
     position: absolute;
-    width: 200px; height: 200px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     top: 5%;
     left: 5%;
@@ -216,14 +217,15 @@ body {
     margin-top: 10em;
 }
 
-.FeaturedProjects .Head{
+.FeaturedProjects .Head {
     background-color: #1B3444;
     text-align: center;
     color: #D39E4D;
     justify-self: center;
     border-radius: 15px;
     width: 350px;
-    padding-top: 1px; padding-bottom: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 .FeaturedProjects .Projects {
@@ -252,15 +254,17 @@ body {
     margin-left: 200px;
 }
 
-.FeaturedProjects .Projects .Section h1{
+.FeaturedProjects .Projects .Section h1 {
     color: whitesmoke;
     text-align: center;
 }
-.FeaturedProjects .Projects .Section p{
+
+.FeaturedProjects .Projects .Section p {
     color: whitesmoke;
     text-align: center;
     font-size: large;
-    margin-left: 10px; margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .FeaturedProjects .Projects div .Panel {
@@ -294,32 +298,33 @@ body {
 
 
 
-.FeaturedProjects .Projects .Two .Panel{
+.FeaturedProjects .Projects .Two .Panel {
     display: flex
 }
 
-.FeaturedProjects .Projects .Two .Panel .Lightimg{
+.FeaturedProjects .Projects .Two .Panel .Lightimg {
     width: 100%;
-    clip-path: polygon(00% 00%, 100% 00%, 00% 100%); 
+    clip-path: polygon(00% 00%, 100% 00%, 00% 100%);
 }
-.FeaturedProjects .Projects .Two .Panel .Darkimg{
+
+.FeaturedProjects .Projects .Two .Panel .Darkimg {
     width: 100%;
-    clip-path: polygon(100% 0%, 100% 100%, 0% 100%); 
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
     margin-left: -400px;
 }
 
 
 
-.FeaturedProjects .Projects .Three .Panel{
+.FeaturedProjects .Projects .Three .Panel {
     background-color: whitesmoke;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.FeaturedProjects .Projects .Three .Panel img{
-    width:135px;
-    margin-right: -10%;
+.FeaturedProjects .Projects .Three .Panel img {
+    width: 135px;
+    margin-right: -15%; margin-left: 5%;
 }
 
 
