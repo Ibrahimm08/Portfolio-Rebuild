@@ -349,7 +349,7 @@ body {
 .HomeContact {
     display: flex;
     justify-content: center;
-    margin-top: 40em;
+    margin-top: 20em;
     margin-bottom: 20em;
 }
 
@@ -403,12 +403,12 @@ body {
 }
 
 .Bottomimg{
+    position: absolute;
     background-image: url(Images/Group\ 14.png);
     background-repeat: no-repeat;
     background-position-y: bottom;
     background-size: contain;
-    margin-top: 20em;
-    margin-bottom: -85%;
+    margin-bottom: 0;
     width: 1000px; height: 1024px;
     z-index: -1;
 }
