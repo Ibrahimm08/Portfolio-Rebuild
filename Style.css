@@ -68,7 +68,7 @@ body {
 
 .Header img {
     position: absolute;
-    width: 200px;
+    width: 200px; height: 200px;
     border-radius: 50%;
     top: 5%;
     left: 5%;
@@ -204,11 +204,26 @@ body {
     background-color: #1B3444;
 }
 
+
+
+
+
+
 .FeaturedProjects {
     flex-wrap: wrap;
     margin-top: 250px;
     width: 100%;
     margin-top: 10em;
+}
+
+.FeaturedProjects .Head{
+    background-color: #1B3444;
+    text-align: center;
+    color: #D39E4D;
+    justify-self: center;
+    border-radius: 15px;
+    width: 350px;
+    padding-top: 1px; padding-bottom: 1px;
 }
 
 .FeaturedProjects .Projects {
@@ -237,7 +252,19 @@ body {
     margin-left: 200px;
 }
 
+.FeaturedProjects .Projects .Section h1{
+    color: whitesmoke;
+    text-align: center;
+}
+.FeaturedProjects .Projects .Section p{
+    color: whitesmoke;
+    text-align: center;
+    font-size: large;
+    margin-left: 10px; margin-right: 10px;
+}
+
 .FeaturedProjects .Projects div .Panel {
+    overflow: hidden;
     background-color: #749CDE;
     width: 400px;
     height: 200px;
@@ -246,9 +273,12 @@ body {
 
 }
 
+
+
+
+
 .FeaturedProjects .Projects .One .Panel {
     background-color: #69696969;
-    overflow: hidden;
 }
 
 .FeaturedProjects .Projects .One .Panel .Decor {
@@ -260,6 +290,41 @@ body {
     height: 100%;
     width: 30%;
 }
+
+
+
+
+.FeaturedProjects .Projects .Two .Panel{
+    display: flex
+}
+
+.FeaturedProjects .Projects .Two .Panel .Lightimg{
+    width: 100%;
+    clip-path: polygon(00% 00%, 100% 00%, 00% 100%); 
+}
+.FeaturedProjects .Projects .Two .Panel .Darkimg{
+    width: 100%;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%); 
+    margin-left: -400px;
+}
+
+
+
+.FeaturedProjects .Projects .Three .Panel{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.FeaturedProjects .Projects .Three .Panel img{
+    width:135px;
+    margin-right: -10%;
+}
+
+
+
+
 
 
 .HomeContact {
