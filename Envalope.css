@@ -1,0 +1,231 @@
+.envalope{
+    position: absolute;
+    background-color: blue;
+    border-radius: 10px;
+    width: 400px; height: 200px;
+    scale: 0.4;
+    margin-top: 75px; margin-left: 170px;
+    rotate: 10deg;
+    transition: all 0.2s;
+}
+.left{
+    position: absolute;
+    border-style: solid;
+    border-width: 200px 0 0 300px;
+    border-color: transparent transparent transparent #2A95FF;
+    border-radius: 10px;
+    z-index: 2;
+}
+.right{
+    position: absolute;
+    margin-left: 100px;
+    border-style: solid;
+    border-width: 200px 0 0 300px;
+    border-color: transparent transparent transparent #2585e6;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+    z-index: 3;
+}
+.top {
+    position: absolute;
+    border-style: solid;
+    border-width: 135px 200px 0 200px;
+    border-color: #419df9 transparent transparent transparent;
+    border-radius: 10px;
+    top: 0;
+    transition-delay: 0.7s;
+    transition: transform  z-index step-start;
+    z-index: 4;
+}
+.btn{
+    position: absolute;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 500px; height: 400px;
+    z-index: 5;
+}
+
+/* ----------------Form Content--------------- */
+.form{
+    position: absolute;
+    left: 10px;
+    background-color: white;
+    border-radius: 10px;
+    width: 380px; height: 200px;
+    bottom: 0;
+    cursor: pointer;
+    transition: 0.8s;
+    overflow: hidden;
+}
+
+.form div{
+    position: absolute;
+}
+
+.form .InnerLines{
+    background-color: rgba(0, 0, 0, 0.697);
+    width: 130px; height: 5px;
+    top: 7px;
+    transition: 0.5s 0.5s;
+}
+
+.form .Fheader{
+    background-color: rgba(0, 0, 0, 0.783);
+    width: 150px; height: 35px;
+    border-radius: 5px;
+    top: 10px;
+    left: 10px;
+}
+
+.form .Fpara{
+    background-color: rgba(254, 99, 99, 0.593);
+    width: 100px; height: 20px;
+}
+
+.form .Fpara:nth-child(5){
+    top:260px;
+    left: 10px;
+}.form .Fpara:nth-child(5) .Flines{
+    background-color: rgba(177, 177, 177, 0.593);;
+    width: 360px; height: 60px;
+}.form .Fpara:nth-child(5) .InnerLines{
+    transition-delay: 1.5s;
+}.form .Fpara:nth-child(5) .InnerLines:nth-child(2){
+    top: 25px;
+    width: 340px;
+}.form .Fpara:nth-child(5) .InnerLines:nth-child(3){
+    top: 45px;
+    width: 200px;
+}.form .Fpara:nth-child(5) .InnerLines:nth-child(1){
+    width: 340px;
+}
+
+.form .Fpara:nth-child(4){
+    top: 180px;
+    left: 10px;
+}.form .Fpara:nth-child(4) .Flines{
+    width: 360px; height: 40px;
+}.form .Fpara:nth-child(4) .InnerLines{
+    width: 340px;
+    transition-delay: 1s;
+}.form .Fpara:nth-child(4) .InnerLines:nth-child(2){
+    top: 25px;
+}
+
+.form .Fpara:nth-child(3){
+    top: 80px;
+    left: calc(50% + 10px);
+}
+
+.form .Fpara:nth-child(2){
+    top: 80px;
+    left: 10px;
+}
+
+.form .Flines{
+    background-color: rgba(99, 166, 254, 0.593);
+    width: 150px; height: 20px;
+    top: 30px
+}
+
+.form .Circle{
+    background-color: rgba(99, 166, 254, 0.856);
+    width: 80px; height: 40px;
+    border-radius: 100px;
+    top: 360px;
+    right: 50px;
+}
+
+.form .Checkbox{
+    border: 3px solid rgba(0, 0, 0, 0.783);
+    background-color: rgb(254, 99, 99);
+    width: 10px; height: 10px;
+    top: 380px;
+    left: 60px;
+    transition: 0.5s 2s;
+}
+.form .Checkbox .Flines{
+    background-color: rgba(0, 0, 0, 0.783);;
+    height: 5px;
+    top: 3px;
+    left: 15px
+}
+
+.FakeCursor{
+    border-style: solid;
+    border-width: 0 10px 30px 10px;
+    border-color: transparent transparent #000000 transparent;
+    transform: rotate(90deg);
+    top: 380px;
+    left: 10px;
+}
+/* ------------------------------------------------------------ */
+
+
+/* ------------------Hover Controls------------------ */
+
+    body:has(.btn:hover) .top{
+        transition-delay: 0s;
+        transform: rotateX(180deg) translateY(130px);
+        z-index: 0;
+    }
+    body:has(.btn:not(:hover) .top){
+        transform: rotateX(0deg) translateY(0px);
+    }
+    body:has(.btn:hover) .envalope{
+        box-shadow: 10px 10px 40px;
+        transform: translateY(10px);
+        animation-play-state: paused;
+    }
+    body:has(.btn:hover) .form{
+        transition: all 0.3s 0.5s;
+        height: 250px;
+        bottom: 0;
+    }
+
+/* ------------------Button Controls------------------ */
+
+    body:has(.btn:not(:active)) .Fpara:nth-child(5) .InnerLines, body:has(.btn:not(:active)) .Fpara .InnerLines{
+        /* transition: 0s; */
+        transition-delay: 0s;
+        width: 0px;
+    }
+    body:has(.btn:not(:active)) .form .Checkbox{
+        /* transition: 0s; */
+        transition-delay: 0s;
+        background-color: white;
+    }
+
+    body:has(.btn:active) .form .FakeCursor{
+        animation: Plant-Yourself-On-The-Point 2s both 1s ;
+    }
+
+    body:has(.btn:active) .form .Circle{
+        transition: 0.5s;
+        transition-delay: 2.75s;
+        background-color: rgb(254, 99, 99);
+    }
+
+    body:has(.btn:active) .form{
+        transition-delay: 0s;
+        height: 550px;
+    }
+
+/* ------------------Animations------------------ */
+
+    /* Fake cursor animation */
+    @keyframes Plant-Yourself-On-The-Point {
+        0%{
+            transform: rotateZ(80deg) translateX(0px) translateY(0px);
+        }
+        30%{
+            transform: rotateZ(90deg) translateX(130px) translateY(-30px);
+        }
+        50%{
+            transform: rotateZ(60deg) translateX(180px) translateY(-80px) ;
+        }
+        100%{
+            transform: rotateZ(30deg) translateX(200px) translateY(-120px);
+        }
+    }
