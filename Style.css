@@ -1,63 +1,125 @@
-html{
+html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
-body{
-    width: 100%; height: 100%;
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #F1F1DC;
+    margin: 0;
 }
 
-.NavBar{
+.NavBar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: center;
     position: sticky;
     background-color: #1B3444;
-    height: 80px; width: 100%;
+    height: 80px;
+    width: 100%;
     z-index: 10;
-    padding-top: 10px; padding-left: 10px;
+    padding-top: 10px;
 }
-.NavBar nav{
+
+.NavBar nav {
     margin-right: 8%;
 }
-.NavBar a{
+
+.NavBar a {
     color: #F1F1DC;
     text-decoration: none;
     font-size: larger;
     margin-right: 20px;
     margin-left: 20px;
 }
-.NavBar .Logo{
+
+.NavBar .Logo {
     display: flex;
     align-items: center;
     color: #F1F1DC;
     margin-left: 1%;
 }
-.NavBar .Logo p{
+
+.NavBar .Logo p {
     font-size: larger;
     margin-left: 5%;
 }
-.Header{
+
+.Header {
     display: flex;
     flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
     flex-wrap: nowrap;
     position: absolute;
     box-shadow: 10px 20px 5px rgba(0, 0, 0, 0.286);
     border-radius: 20px;
-    top: 200px;
-    width: 400px; height: 200px;
+    top: 25%;
+    margin-left: 50px;
+    width: 500px;
+    height: 300px;
     background-color: #1B3444;
 }
-.Header img{
-    width: 80px;
+
+.Header img {
+    position: absolute;
+    width: 140px;
     border-radius: 50%;
+    top: 10%;
+    left: 5%;
 }
-.Header .Banner{
+
+.Header .Banner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     background-color: #2A4A7E;
-    margin-top: 10px; margin-left: 20px; margin-right: 20px;
+    color: #F1F1DC;
+    align-self: flex-end;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+    width: 250px;
+    height: 120px;
 }
-.Header .About{
+
+.Header .Banner ul {
+    overflow: scroll;
+    color: #D39E4D;
+    margin-top: -80px;
+    margin-left: 40px;
+    height: 60px;
+    width: 180px;
+    animation: scrolling 1s infinite linear alternate;
+}
+
+@keyframes scrolling {
+    0%,
+    30% {
+        transform: translateY(0px);
+    }
+
+    33%,
+    60% {
+        transform: translateY(-40px);
+    }
+
+    65%,
+    100% {
+        transform: translateY(-75px);
+    }
+}
+
+.Header .About {
     background-color: #2A4A7E;
-    margin-top: 10px; margin-left: 10px; margin-right: 20px;
+    color: #F1F1DC;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
 }
