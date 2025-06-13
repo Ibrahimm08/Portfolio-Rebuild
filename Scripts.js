@@ -18,16 +18,10 @@ function CatagorySelect(){
             // var count = 0;
             // for(i = 0; i < ProjectItem.length; i++){
             //     if(ProjectItem[i].id.includes(catagory.id)){
-            //         ProjectItem[i].style.display = "flex";
-                    
-            //         for(var x = 0; x < ProjectItem[i].children.length; x++){
-            //             ProjectItem[i].children[x].style.display = "block";
-            //             console.log(ProjectItem[i].children[x])
-            //         }
-                    
+            //         ProjectItem[i].classList.remove("hidden");    
             //         count++;
             //     } else{
-            //         ProjectItem[i].style.display = "none";
+            //         ProjectItem[i].classList.add("hidden");
             //     }
             // }
 

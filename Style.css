@@ -242,6 +242,7 @@ body {
     justify-self: center;
     border-radius: 15px;
     width: 350px;
+    margin-left: 70px;
     padding-top: 1px;
     padding-bottom: 1px;
 }
@@ -479,9 +480,9 @@ body {
 
 .SelectorBar {
     display: flex;
-    max-width: 1500px;
-    width: 100%;
-    min-width: 100px;
+    width: 1500px;
+    /* width: 100%; */
+    /* min-width: 100px; */
     height: 100px;
     margin-left: 10px;
     margin-right: 10px;
@@ -541,7 +542,7 @@ body {
 }
 
 .ProjectsList .Section{
-    display: flex;
+
     flex-direction: column;
     border: #D39E4D 8px solid;
     background-color: #749CDE;
@@ -597,5 +598,10 @@ body {
 
 #NoResult{
     margin-top: 10em;
+    margin-right: 10em;
+    display: none;
+}
+
+.hidden{
     display: none;
 }
