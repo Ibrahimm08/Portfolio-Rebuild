@@ -3,8 +3,7 @@ function CatagorySelect(){
     const Catagory = document.querySelectorAll(".Catagory");
     const pill = document.querySelector(".MoveablePill");    
     const Projects = document.getElementById("ProjectList");
-    const ProjectItem = Projects.getElementsByTagName("div");
-    var a
+    const ProjectItem = Projects.getElementsByClassName("Section");
 
     Catagory.forEach((catagory) => {
         pill.classList.remove(catagory.id);
@@ -15,21 +14,22 @@ function CatagorySelect(){
             }
             pill.classList.add(catagory.id);
 
-            // var count = 0;
-            // for(i = 0; i < ProjectItem.length; i++){
-            //     if(ProjectItem[i].id.includes(catagory.id)){
-            //         ProjectItem[i].classList.remove("hidden");    
-            //         count++;
-            //     } else{
-            //         ProjectItem[i].classList.add("hidden");
-            //     }
-            // }
+            var count = 0;
+            for(i = 0; i < ProjectItem.length; i++){
+                if(ProjectItem[i].id.includes(catagory.id)){
+                    ProjectItem[i].style.display="";
+                    count++;
+                } else{
+                    console.log("action done")
+                    ProjectItem[i].style.display="none";
+                }
+            }
 
-            // if(count == 0){
-            //     document.getElementById("NoResult").style.display="block";
-            // }else{
-            //     document.getElementById("NoResult").style.display="none";
-            // }
+            if(count == 0){
+                document.getElementById("NoResult").style.display="block";
+            }else{
+                document.getElementById("NoResult").style.display="none";
+            }
         })
     })
 }

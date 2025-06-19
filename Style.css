@@ -2,27 +2,36 @@ html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 100%;
     height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-:root {
-    --Pill-Movement: -350px
-}
 
 body {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
     background-color: #f0f0ca;
     margin: 0;
 }
 
+main {
+    flex-grow: 1;
+}
+
+
 .Topimg {
     position: absolute;
+    overflow: hidden;
     background-image: url(Images/Group\ 15.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 100%;
-    height: 1000px;
+    transform: translateX(-21px);
+    width: 101%;
+    height: 100%;
     z-index: -1;
 }
 
@@ -38,20 +47,42 @@ body {
     z-index: 10;
     padding-top: 10px;
     top: 0;
+    animation: changeBg auto linear both;
+    animation-timeline: scroll();
 }
 
 .NavBar nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    text-wrap: nowrap;
+    overflow: hidden;
     width: 500px;
     margin-right: 8%;
 }
 
-.NavBar a {
+.NavBar nav a {
+    display: inline-block;
     color: #F1F1DC;
     text-decoration: none;
     font-size: larger;
 }
+
+.NavBar nav a::before {
+    content: attr(data-text);
+    display: flex;
+    color: #00ccff;
+    text-decoration: underline;
+    overflow: hidden;
+    position: absolute;
+    width: 0px;
+    transition: 1s;
+}
+
+.NavBar nav a:hover:before {
+    width: 100px;
+}
+
+
 
 .NavBar .Logo {
     display: flex;
@@ -75,7 +106,7 @@ body {
     z-index: 1;
     box-shadow: 10px 20px 5px rgba(0, 0, 0, 0.286);
     border-radius: 20px;
-    margin-top: 15em;
+    margin-top: 300px;
     margin-left: 15%;
     width: 800px;
     height: 400px;
@@ -143,17 +174,17 @@ body {
 
     0%,
     30% {
-        transform: translateY(0px);
+        transform: translateY(-10%);
     }
 
     33%,
     60% {
-        transform: translateY(-90px);
+        transform: translateY(-160%);
     }
 
     65%,
     100% {
-        transform: translateY(-175px);
+        transform: translateY(-310%);
     }
 }
 
@@ -205,6 +236,7 @@ body {
 
 
 .HomeAbout {
+    justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
     margin-top: 65em;
@@ -214,9 +246,6 @@ body {
 .HomeAbout .SectionTwo {
     height: 400px;
     width: 800px;
-    padding-left: 10px;
-    margin-left: 40px;
-    margin-right: 40px;
     margin-top: 10px;
     border-radius: 20px;
     color: #D39E4D;
@@ -414,9 +443,9 @@ body {
     filter: brightness(90%);
 }
 
-.Bottomimg {
+/* .Bottomimg {
     position: absolute;
-    background-image: url(Images/Group\ 14.png);
+    background-image: url(Images/Group14.png);
     background-repeat: no-repeat;
     background-position-y: bottom;
     background-size: contain;
@@ -424,14 +453,11 @@ body {
     width: 1000px;
     height: 1024px;
     z-index: -1;
-}
+} */
 
-.Footer {
-    width: 100%;
+footer {
     height: 100px;
-    bottom: 0;
     background-color: #1B3444;
-    z-index: 10;
 }
 
 
@@ -439,17 +465,17 @@ body {
 /* Project Page CSS ///////////////////////////////////////////////////////////////////////////// */
 
 .Title {
-    position: absolute;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 8em;
+    margin-top: 200px;
 }
 
 .Title .Banner {
     display: flex;
     justify-content: center;
+    box-shadow: 0px 14px 20px black;
     border-radius: 10px;
     margin-left: 15px;
     margin-right: 15px;
@@ -467,28 +493,22 @@ body {
 }
 
 .ProjectContainter {
-    position: absolute;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 30em;
+    margin-top: 600px;
+    margin-bottom: 500px;
 }
 
-.ProjectContainter .Section {
-    margin-top: 8%;
-}
 
 .SelectorBar {
     display: flex;
-    width: 1500px;
-    /* width: 100%; */
-    /* min-width: 100px; */
+    width: 100vw;
     height: 100px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: -5cm;
+    margin-bottom: -100px;
     background-color: #2A4A7E;
     border-radius: 10px;
+    z-index: 1;
 }
 
 .ButtonHolder {
@@ -520,59 +540,103 @@ body {
     transition: transform 0.5s ease;
 }
 
-.a {
-    --Pill-Movement: -350px
-}
+.a {--Pill-Movement: calc(-100vw*0.23);}
 
-.b {
-    --Pill-Movement: -120px
-}
+.b {--Pill-Movement: calc(-100vw*0.075);}
 
-.c {
-    --Pill-Movement: 115px
-}
+.c {--Pill-Movement: calc(100vw*0.075);}
 
-.d {
-    --Pill-Movement: 350px
-}
+.d {--Pill-Movement: calc(100vw*0.23);}
 
-.ProjectsList{
+.ProjectsList {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
+    margin-top: 100px;
+    justify-content: space-evenly;
 }
 
-.ProjectsList .Section{
-
-    flex-direction: column;
-    border: #D39E4D 8px solid;
+.ProjectsList .Section {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    /* border: #D39E4D 8px solid; */
     background-color: #749CDE;
     border-radius: 10px;
-    margin-top: 4cm;
-    margin-right: 40px;
-    margin-left: 40px;
-    width: 800px; height: 700px;
+    width: 100%;
+    height: 800px;
 }
-.ProjectsList .Section .display{
+
+.ProjectsList .Section .text{
+    overflow: hidden;
+    width: 0%;
+    transition: 1s;
+}
+
+.ProjectsList .Section .text h1{
+    margin-left: 20px;
+    width: 700px;
+}
+
+.ProjectsList .Section .display {
     display: flex;
-    background-color: #2A4A7E;
+    justify-content: center;
+    align-items: center;
+    background-color: #273c5e;
     width: 100%;
-    height: 60%;
+    transition: 1s;
 }
 
-.ProjectsList .Section .display img{
+.ProjectsList .Section .display div{
+    background-color: rgba(0, 0, 0, 0.123);
+    padding: 5px 20px;
+    font-size: x-large;
+    text-decoration: underline gray;
+}
+
+
+.ProjectsList .Section:nth-child(1) .display{
+    background-image: url(Images/FirstWebsite.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.ProjectsList .Section:nth-child(1):hover .display{
+    background-position: -400px;
+    width: 60%;
+} 
+
+.ProjectsList .Section:nth-child(1):hover .text{
+    width: 40%;
+}
+
+
+.ProjectsList .Section:nth-child(2) .display{
+    background-image: url(Images/Combine.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.ProjectsList .Section:nth-child(2):hover .display{
+    background-position: -400px;
+    width: 60%;
+} 
+
+.ProjectsList .Section:nth-child(2):hover .text{
+    width: 40%;
+}
+
+
+.ProjectsList .Section .display img {
     width: 100%;
 }
 
-.ProjectsList .Lightimg {
-    width: 100%;
-    clip-path: polygon(00% 00%, 100% 00%, 00% 100%);
-}
-
-.ProjectsList .Darkimg {
-    width: 100%;
-    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
-    margin-left: -800px;
-}
 
 .ProjectsList .Panel {
     background-color: #69696969;
@@ -590,18 +654,70 @@ body {
     font-size: larger;
 }
 
-.ProjectsList .envalope{
+.ProjectsList .envalope {
     scale: 0.7;
     transform: translate(400px, 90px)
 }
 
 
-#NoResult{
-    margin-top: 10em;
-    margin-right: 10em;
+#NoResult {
+    text-align: center;
+    margin-top: 5cm;
+    margin-right: 7vw;
+
     display: none;
 }
 
-.hidden{
-    display: none;
+
+.ProjectBackgroundContain {
+    top: 0;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 1020px;
+    z-index: -1;
+}
+
+.ProjectBackground {
+    background: url(Images/ScrollerProjects.jpg) repeat-x fixed center;
+    background-size: 100vw;
+    overflow: hidden;
+    width: 7680px;
+    min-height: 1020px;
+    scale: 125%;
+    animation: slide 10s linear infinite;
+}
+
+.ProjectBackgroundEffect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 400px 50px black;
+    z-index: 1;
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translate(0)
+    }
+
+    100% {
+        transform: translate(-100vw);
+    }
+}
+
+@supports (animation-timeline: view()) {
+    @keyframes changeBg {
+        0% {
+            background-color: #2A4A7E;
+            color: #ddd;
+        }
+
+        10%,
+        100% {
+            background-color: rgba(0, 0, 0, 0.439);
+            color: whitesmoke;
+        }
+    }
 }
