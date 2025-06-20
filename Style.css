@@ -496,8 +496,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 600px;
-    margin-bottom: 500px;
+    margin-top: 500px;
 }
 
 
@@ -540,13 +539,21 @@ footer {
     transition: transform 0.5s ease;
 }
 
-.a {--Pill-Movement: calc(-100vw*0.23);}
+.a {
+    --Pill-Movement: calc(-100vw*0.23);
+}
 
-.b {--Pill-Movement: calc(-100vw*0.075);}
+.b {
+    --Pill-Movement: calc(-100vw*0.075);
+}
 
-.c {--Pill-Movement: calc(100vw*0.075);}
+.c {
+    --Pill-Movement: calc(100vw*0.075);
+}
 
-.d {--Pill-Movement: calc(100vw*0.23);}
+.d {
+    --Pill-Movement: calc(100vw*0.23);
+}
 
 .ProjectsList {
     display: flex;
@@ -561,21 +568,23 @@ footer {
     flex-direction: row;
     overflow: hidden;
     /* border: #D39E4D 8px solid; */
-    background-color: #749CDE;
-    border-radius: 10px;
+    background-color: #002767;
     width: 100%;
     height: 800px;
 }
 
-.ProjectsList .Section .text{
+.ProjectsList .Section .text {
     overflow: hidden;
     width: 0%;
     transition: 1s;
+    align-self: center;
+    text-align: center;
+    color: whitesmoke;
 }
 
-.ProjectsList .Section .text h1{
+.ProjectsList .Section .text h1 {
     margin-left: 20px;
-    width: 700px;
+    width: 650px;
 }
 
 .ProjectsList .Section .display {
@@ -583,62 +592,60 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: #273c5e;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
     width: 100%;
     transition: 1s;
 }
 
-.ProjectsList .Section .display div{
-    background-color: rgba(0, 0, 0, 0.123);
+.ProjectsList .Section .display div {
+    background-color: rgba(0, 0, 0, 0.43);
+    color: whitesmoke;
     padding: 5px 20px;
     font-size: x-large;
-    text-decoration: underline gray;
+    text-decoration: underline rgb(158, 158, 158);
 }
 
 
-.ProjectsList .Section:nth-child(1) .display{
+.ProjectsList .Section:nth-child(1) .display {
     background-image: url(Images/FirstWebsite.png);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
 }
 
-.ProjectsList .Section:nth-child(1):hover .display{
+.ProjectsList .Section:hover .display {
     background-position: -400px;
     width: 60%;
-} 
+}
 
-.ProjectsList .Section:nth-child(1):hover .text{
+.ProjectsList .Section:hover .text {
     width: 40%;
 }
 
 
-.ProjectsList .Section:nth-child(2) .display{
+.ProjectsList .Section:nth-child(2) .display {
     background-image: url(Images/Combine.png);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
 }
 
-.ProjectsList .Section:nth-child(2):hover .display{
-    background-position: -400px;
-    width: 60%;
-} 
-
-.ProjectsList .Section:nth-child(2):hover .text{
-    width: 40%;
+.ProjectsList .Section:nth-child(3) .display {
+    background-image: url(Images/Animation.png);
 }
 
-
-.ProjectsList .Section .display img {
-    width: 100%;
+.ProjectsList .Section:nth-child(4) .display {
+    background-image: url(Images/AlternativeNavigation.png);
 }
 
+.ProjectsList .Section:nth-child(5) .display {
+    background-image: url(Images/Better\ Envalope.png);
+}
 
-.ProjectsList .Panel {
+.ProjectsList .Section:nth-child(6) .display {
+    background-image: url(Images/CombinedProfileCard.png);
+    background-size: 110%;
+}
+
+/* .ProjectsList .Panel {
     background-color: #69696969;
     width: 100%;
 }
@@ -657,7 +664,7 @@ footer {
 .ProjectsList .envalope {
     scale: 0.7;
     transform: translate(400px, 90px)
-}
+} */
 
 
 #NoResult {
@@ -684,7 +691,7 @@ footer {
     overflow: hidden;
     width: 7680px;
     min-height: 1020px;
-    scale: 125%;
+    scale: 150%;
     animation: slide 10s linear infinite;
 }
 
