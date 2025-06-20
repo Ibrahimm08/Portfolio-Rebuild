@@ -308,7 +308,7 @@ main {
     margin-top: 40px;
 }
 
-.Projects div .Notch {
+.Notch {
     position: absolute;
     background-color: #D39E4D;
     box-shadow: none;
@@ -780,13 +780,31 @@ footer .fa{
 }
 
 .AboutI .SectionOne,
-.AboutI .SectionTwo {
+.AboutI .SectionTwo,
+.AboutI .SectionThree {
     height: 400px;
     width: 800px;
-    margin-top: 10px;
     border-radius: 20px;
     color: #D39E4D;
     background-color: #1B3444;
+}
+
+.AboutI .SectionThree{
+    margin-top: 200px;
+    width: 1600px;
+}
+
+.AboutI .SectionThree .Notches{
+    display: flex;
+    justify-content: space-between;
+}
+.AboutI .SectionThree .Notch{
+    position: relative;
+    margin: unset;
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 10%;
+    transform: translateY(-20px);
 }
 
 .AboutI h1,
@@ -812,4 +830,16 @@ footer .fa{
     font-size: 64px;
     color: white;
     text-decoration: none;
+}
+
+.ImageHolder{
+    display: flex;
+    justify-content: center;
+    height: 120px;
+}
+.ImageHolder img:nth-child(3){
+    clip-path: circle();
+    margin-left: -20px;
+    margin-top: 10px;
+    height: 100px;
 }
