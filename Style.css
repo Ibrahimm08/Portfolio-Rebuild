@@ -607,7 +607,7 @@ footer .fa{
     /* border: #D39E4D 8px solid; */
     background-color: #002767;
     width: 100%;
-    height: 800px;
+    height: 1000px;
 }
 
 .ProjectsList .Section .text {
@@ -681,28 +681,6 @@ footer .fa{
     background-image: url(Images/CombinedProfileCard.png);
     background-size: 110%;
 }
-
-/* .ProjectsList .Panel {
-    background-color: #69696969;
-    width: 100%;
-}
-
-.ProjectsList .Panel .Decor {
-    background-color: black;
-    color: whitesmoke;
-    text-align: center;
-    border-right: 1px solid whitesmoke;
-    padding-top: 10px;
-    height: 97.7%;
-    width: 30%;
-    font-size: larger;
-}
-
-.ProjectsList .envalope {
-    scale: 0.7;
-    transform: translate(400px, 90px)
-} */
-
 
 #NoResult {
     text-align: center;
