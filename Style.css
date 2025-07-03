@@ -652,7 +652,7 @@ footer .fa{
 }
 
 .ProjectsList .Section:hover .display {
-    background-position: -400px;
+    background-position: -700px;
     width: 60%;
 }
 
@@ -680,6 +680,18 @@ footer .fa{
 .ProjectsList .Section:nth-child(6) .display {
     background-image: url(Images/CombinedProfileCard.png);
     background-size: 110%;
+}
+
+.ProjectsList .Section:nth-child(7) .display{
+    background-image: url(Images/ContainerGlass.png);
+}
+
+.ProjectsList .Section:nth-child(8) .display{
+    background-image: url(Images/Notification.png);
+}
+
+.ProjectsList .Section:nth-child(9) .display{
+    background-image: url(Images/Hover3D.png);
 }
 
 #NoResult {
