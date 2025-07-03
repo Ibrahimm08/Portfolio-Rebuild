@@ -544,7 +544,7 @@ footer .fa{
 .SelectorBar {
     display: flex;
     width: 100vw;
-    height: 100px;
+    height: 120px;
     margin-bottom: -100px;
     background-color: #2A4A7E;
     border-radius: 10px;
@@ -566,6 +566,7 @@ footer .fa{
     border-radius: 10px;
     width: 120px;
     height: 60px;
+    font-size: larger;
     z-index: 1;
 }
 
@@ -579,6 +580,8 @@ footer .fa{
     transform: translateX(var(--Pill-Movement));
     transition: transform 0.5s ease;
 }
+
+/* Button Positions */
 
 .a {
     --Pill-Movement: calc(-100vw*0.23);
@@ -700,9 +703,8 @@ footer .fa{
 
 #NoResult {
     text-align: center;
-    margin-top: 5cm;
-    margin-right: 7vw;
-
+    margin-top: 10cm;
+    margin-bottom: 10cm;
     display: none;
 }
 
